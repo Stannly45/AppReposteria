@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/prod_background"
+    android:elevation="3dp">
+
+    <ImageView
+        android:id="@+id/imgPhotoItem"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cat_r_3" />
+
+    <TextView
+        android:id="@+id/txtNombreItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="Nombre"
+        android:textColor="#373b54"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imgPhotoItem"
+        app:layout_constraintTop_toTopOf="@+id/imgPhotoItem" />
+
+    <ImageView
+        android:id="@+id/imgMenosCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPhotoItem"
+        app:layout_constraintStart_toStartOf="@+id/txtNombreItem"
+        app:srcCompat="@drawable/minus" />
+
+    <TextView
+        android:id="@+id/txtNumberItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="1"
+        android:textColor="#373b54"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMenosCart"
+        app:layout_constraintStart_toEndOf="@+id/imgMenosCart"
+        app:layout_constraintTop_toTopOf="@+id/imgMenosCart" />
+
+    <ImageView
+        android:id="@+id/imgMasCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMenosCart"
+        app:layout_constraintStart_toEndOf="@+id/txtNumberItem"
+        app:layout_constraintTop_toTopOf="@+id/imgMenosCart"
+        app:srcCompat="@drawable/plus" />
+
+    <TextView
+        android:id="@+id/txtPrecioItemCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        android:textColor="#373b54"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNombreItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtNombreItem" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="Bs. "
+        android:textColor="#60413d"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtPrecioItemCart"
+        app:layout_constraintEnd_toStartOf="@+id/txtPrecioItemCart"
+        app:layout_constraintTop_toTopOf="@+id/txtPrecioItemCart" />
+
+    <TextView
+        android:id="@+id/txtTotalItemCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#373b54"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMasCart"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrecioItemCart"
+        app:layout_constraintTop_toTopOf="@+id/imgMasCart" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="Bs. "
+        android:textColor="#60413d"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTotalItemCart"
+        app:layout_constraintEnd_toStartOf="@+id/txtTotalItemCart"
+        app:layout_constraintTop_toTopOf="@+id/txtTotalItemCart" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.example.reposteriaapp.R;
@@ -20,6 +21,10 @@ public class IntroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
+        playVideo();
+    }
+
+    private void playVideo(){
         viewIntro = findViewById(R.id.viewIntro);
         viewIntro.setVideoURI(Uri.parse("android.resource://"+getPackageName() + "/" + R.raw.intro));
         viewIntro.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
@@ -37,5 +42,10 @@ public class IntroActivity extends AppCompatActivity {
             }
         });
     }
-    
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        playVideo();
+    }
 }

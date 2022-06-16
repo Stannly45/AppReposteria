@@ -4,6 +4,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 import com.example.reposteriaapp.Domain.ProductoDomain;
+import com.example.reposteriaapp.Interface.CalcularList;
 
 import java.util.ArrayList;
 
@@ -15,6 +16,12 @@ public class ManejoCarro {
         this.context = context;
         this.tinyDB = new TinyDB(context);
     }
+
+    public void BorrarCarro(ArrayList<ProductoDomain> list){
+        list.clear();
+        tinyDB.putListObject("CartList", list);
+    }
+
     public void insertarProducto(ProductoDomain item){
         ArrayList<ProductoDomain> listFood = getListCart();
         boolean existAlready = false;
@@ -38,5 +45,49 @@ public class ManejoCarro {
 
     public ArrayList<ProductoDomain> getListCart() {
         return tinyDB.getListObject("CartList");
+    }
+
+    public void aumentarCarro(ArrayList<ProductoDomain> listProductos, int position, CalcularList calcularList){
+        int cantidad = listProductos.get(position).getNumberinCart();
+        if (cantidad<11){
+            listProductos.get(position).setNumberinCart(cantidad+1);
+            tinyDB.putListObject("CartList",listProductos);
+            calcularList.calcular();
+        }else {
+            Toast.makeText(context, "No se puede Aumentar mas Cantidad de " + listProductos.get(position).getNombre(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void reducirCarro(ArrayList<ProductoDomain> listProductos, int position, CalcularList calcularList){
+        int cantidad = listProductos.get(position).getNumberinCart();
+        if (listProductos.size() > 1){
+            if (cantidad==1){
+                Toast.makeText(context, listProductos.get(position).getNombre() + " Eliminada", Toast.LENGTH_SHORT).show();
+                listProductos.remove(position);
+            }else {
+                listProductos.get(position).setNumberinCart(cantidad-1);
+            }
+        }else{
+            if (cantidad==1){
+                Toast.makeText(context, listProductos.get(position).getNombre() + " Eliminada", Toast.LENGTH_SHORT).show();
+                listProductos.clear();
+
+            }else {
+                listProductos.get(position).setNumberinCart(cantidad-1);
+            }
+        }
+
+        tinyDB.putListObject("CartList",listProductos);
+        calcularList.calcular();
+
+    }
+
+    public double getTotal(){
+        ArrayList<ProductoDomain> listProductos = getListCart();
+        double total = 0;
+        for (int i = 0; i < listProductos.size(); i++){
+            total = total + (listProductos.get(i).getNumberinCart()*listProductos.get(i).getPrecio());
+        }
+        return  total;
     }
 }

@@ -41,7 +41,7 @@
                 android:id="@+id/imgPhotoDetalle"
                 android:layout_width="match_parent"
                 android:layout_height="450dp"
-                app:srcCompat="@drawable/pizza" />
+                app:srcCompat="@drawable/prod_1" />
 
             <LinearLayout
                 android:layout_width="match_parent"

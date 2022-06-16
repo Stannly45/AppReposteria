@@ -24,6 +24,7 @@
         android:textColor="#FFFFFF"
         android:textSize="60sp"
         android:textStyle="italic"
+        android:fontFamily="@font/harland_roselyn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/viewIntro" />
@@ -35,8 +36,9 @@
         android:layout_marginBottom="64dp"
         android:text="&quot;MARTINEZ&quot;"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:textStyle="italic"
+        android:fontFamily="@font/harland_roselyn"
         app:layout_constraintBottom_toTopOf="@+id/btnStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

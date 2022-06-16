@@ -8,10 +8,12 @@
         <entry key="..\:/Users/Stanl/AndroidStudioProjects/ReposteriaApp/app/src/main/res/drawable/cat_background.xml" value="0.2595" />
         <entry key="..\:/Users/Stanl/AndroidStudioProjects/ReposteriaApp/app/src/main/res/drawable/prod_background.xml" value="0.2575" />
         <entry key="..\:/Users/Stanl/AndroidStudioProjects/ReposteriaApp/app/src/main/res/drawable/search_background.xml" value="0.2575" />
+        <entry key="..\:/Users/Stanl/AndroidStudioProjects/ReposteriaApp/app/src/main/res/layout/activity_cart.xml" value="0.25" />
         <entry key="..\:/Users/Stanl/AndroidStudioProjects/ReposteriaApp/app/src/main/res/layout/activity_intro.xml" value="0.10972222222222222" />
         <entry key="..\:/Users/Stanl/AndroidStudioProjects/ReposteriaApp/app/src/main/res/layout/activity_main.xml" value="0.16486486486486487" />
         <entry key="..\:/Users/Stanl/AndroidStudioProjects/ReposteriaApp/app/src/main/res/layout/activity_main2.xml" value="0.16486486486486487" />
         <entry key="..\:/Users/Stanl/AndroidStudioProjects/ReposteriaApp/app/src/main/res/layout/activity_producto_detail.xml" value="0.16486486486486487" />
+        <entry key="..\:/Users/Stanl/AndroidStudioProjects/ReposteriaApp/app/src/main/res/layout/item_carro.xml" value="0.4" />
         <entry key="..\:/Users/Stanl/AndroidStudioProjects/ReposteriaApp/app/src/main/res/layout/item_categoria.xml" value="0.264" />
         <entry key="..\:/Users/Stanl/AndroidStudioProjects/ReposteriaApp/app/src/main/res/layout/item_producto.xml" value="0.16486486486486487" />
       </map>

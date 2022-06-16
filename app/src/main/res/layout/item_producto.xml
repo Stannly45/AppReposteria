@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombre"
-        app:srcCompat="@drawable/pop_1" />
+        app:srcCompat="@drawable/prod_1" />
 
     <TextView
         android:id="@+id/txtPrecio"

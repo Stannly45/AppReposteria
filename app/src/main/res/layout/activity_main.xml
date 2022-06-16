@@ -27,7 +27,7 @@
           android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/txtSearch"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
@@ -57,7 +57,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toBottomOf="@+id/txtSearch" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCategorias"
@@ -88,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
-            android:paddingStart="22dp"
+            android:paddingStart="30dp"
             android:paddingEnd="22dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -98,34 +98,23 @@
 
     </LinearLayout>
   </ScrollView>
-  <androidx.coordinatorlayout.widget.CoordinatorLayout
-      android:layout_width="match_parent"
-      android:layout_height="100dp"
-      app:layout_constraintBottom_toBottomOf="@id/mainView"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent">
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#f6f6f6"
-        app:fabCradleMargin="8dp"
-        app:fabCradleRoundedCornerRadius="50dp"
-        app:fabCradleVerticalOffset="6dp"
-        android:layout_gravity="bottom"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#60413d"
-        android:elevation="3dp"
-        android:src="@drawable/shopping_cart"
-        app:backgroundTint="#60413d"
-        app:layout_anchor="@+id/app_bar"
-        app:maxImageSize="30dp"
-        android:tint="#ffffff"
-        >
 
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
-  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/fabCarro"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="32dp"
+      android:backgroundTint="#60413d"
+      android:elevation="3dp"
+      android:src="@drawable/shopping_cart"
+      android:tint="#ffffff"
+      app:backgroundTint="#60413d"
+      app:layout_constraintBottom_toBottomOf="@+id/mainView"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:maxImageSize="30dp"
+      tools:ignore="SpeakableTextPresentCheck">
+
+  </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
